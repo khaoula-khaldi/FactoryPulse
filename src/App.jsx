@@ -1,12 +1,20 @@
-import Header from "./components/Header"
-import NavBar from "./components/Navbar"
+import { BrowserRouter, Route ,Routes} from "react-router-dom";
+import Home from "./pages/Home";
+import Machines from "./pages/Machines"
+import addMachine from "./pages/AjouterMachine";
+import MainLayout from "./MainLayout"
 function App() {
   return (
-    <div className="">
-      <Header/>
-      <NavBar/>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route path="table de bord" element={<Home />} />
+          <Route path="Machines" element={<Machines />} />
+          <Route path="addMachine" element={<addMachine/>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
