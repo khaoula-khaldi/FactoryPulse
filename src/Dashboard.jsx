@@ -30,7 +30,6 @@ function Dashboard() {
                 setLoading(false);
             }
         }
-
         loadMachines();
     }, []);
 
