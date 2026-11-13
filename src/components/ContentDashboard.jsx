@@ -1,3 +1,4 @@
+
 function ContentDashborad({machines=[]}){
     const fonctionnement= machines.filter((elemnet)=>{
         return elemnet.status === "En fonctionnement"
@@ -6,13 +7,14 @@ function ContentDashborad({machines=[]}){
         return elemnet.status === "En panne"
     });
 
+
    
 return (
     <div className="space-y-8">
-
-        <h2 className="text-2xl font-bold text-gray-800">
-            Production quotidienne
-        </h2>
+            <h2 className="text-2xl font-bold text-gray-800">
+                Production quotidienne
+            </h2>
+ 
 
         {/* Statistiques */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -86,7 +88,10 @@ return (
 
         </div>
 
+    
     </div>
+
+    
 );
 
 }

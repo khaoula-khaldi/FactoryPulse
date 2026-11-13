@@ -1,6 +1,5 @@
-
 import { useState, useEffect } from "react";
-import ContentDashboard from "./components/ContentDashboard";
+import { Outlet } from "react-router-dom";
 
 async function fetchMachines() {
     const res = await fetch("/machines.json");
@@ -42,7 +41,11 @@ function Dashboard() {
     }
 
     return (
-        <ContentDashboard machines={machines} />
+         <Outlet context={{ machines , setMachines }} />
+        // <>
+        //     <ContentDashboard machines={machines}/>
+        //     {/* <MachinesSection machines={machines} /> */}
+        // </>
     );
 }
 

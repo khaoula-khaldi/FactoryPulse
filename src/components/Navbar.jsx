@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 
 function NavBar() {
+
     return (
         <aside className="w-64 min-h-screen bg-[#73866D] text-white flex flex-col p-6">
 
@@ -11,29 +12,20 @@ function NavBar() {
 
             <ul className="flex flex-col gap-4">
                 <li>
-                    <Link
-                        to="/table de bord"
-                        className="block bg-[#F5F2E9] text-[#73866D] font-semibold px-4 py-4 rounded-2xl"
-                    >
-                        Tableau de bord
+                    <Link to="/" className="block bg-[#F5F2E9] text-[#73866D] font-semibold px-4 py-4 rounded-2xl"> 
+                    Tableau de bord
                     </Link>
                 </li>
 
                 <li>
-                    <Link
-                        to="/Machines"
-                        className="block px-4 py-4 rounded-2xl text-white/90 hover:bg-white/15 transition"
-                    >
-                        Machines
+                    <Link to="/Machines" className="block px-4 py-4 rounded-2xl text-white/90 hover:bg-white/15 transition"> 
+                    Machines
                     </Link>
                 </li>
 
                 <li>
-                    <Link
-                        to="/addMachine"
-                        className="block px-4 py-4 rounded-2xl text-white/90 hover:bg-white/15 transition"
-                    >
-                        Ajouter une machine
+                    <Link to="/add-machine" className="block px-4 py-4 rounded-2xl text-white/90 hover:bg-white/15 transition"> 
+                    Ajouter une machine
                     </Link>
                 </li>
             </ul>

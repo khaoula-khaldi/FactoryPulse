@@ -1,4 +1,8 @@
-function addMachine(){
-    return <h1>add machine</h1>
+import MachineForm from "../components/MachineForm"
+function AddMachine(){
+    
+    return(
+        <MachineForm/>
+    )
 }
-export default addMachine
+export default AddMachine

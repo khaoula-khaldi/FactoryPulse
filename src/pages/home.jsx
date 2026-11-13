@@ -1,10 +1,9 @@
-import Header from "../components/Header"
-import NavBar from "../components/Navbar"
-import Dashboard from "../Dashboard";
-import ContentDashborad from "../components/ContentDashboard"
+import { useOutletContext } from "react-router-dom";
+import ContentDashborad from "../components/ContentDashboard";
 function Home(){
+    const { machines } = useOutletContext();
     return(
-        <Dashboard/>  
+        <ContentDashborad machines={machines} />  
     )
 }
 export default Home
